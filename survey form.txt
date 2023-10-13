@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <h3 ALIGN="CENTER">CUSTOMER SURVEY FORM</h3>
+    <style>
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #008CBA;
+        }
+        .container 
+        {
+            max-width: 800px;
+            margin: 0 auto;
+            background-color: whitesmoke;
+            padding-left: 40px;
+            padding-top: 60px;
+            padding-bottom: 40px;
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        .label {
+            display: inline-block;
+            width: 150px;
+        }
+
+        select, input[type="text"], input[type="email"], input[type="tel"] {
+            width: 80%;
+            padding: 10px;
+            align-content: center;
+        }
+
+        .checkbox-group 
+        {
+            margin-top: 10px;
+        }
+
+        .button {
+            display: inline-block;
+            background-color: #008CBA;
+            color: #fff;
+            padding: 10px 20px;
+            border: none;
+            cursor: pointer;
+        }
+
+        .button.reset {
+            background-color: #f44336;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <form id="surveyForm">
+            <div class="form-group">
+                <label class="label" for="firstName">First Name:</label>
+                <input type="text" id="firstName" name="firstName" required>
+            </div>
+
+            <div class="form-group">
+                <label class="label" for="lastName">Last Name:</label>
+                <input type="text" id="lastName" name="lastName" required>
+            </div>
+
+            <div class="form-group">
+                <label class="label" for="dob">Date of Birth:</label>
+                <input type="date" id="dob" name="dob" required>
+            </div>
+
+            <div class="form-group">
+                <label class="label" for="country">Country:</label>
+                <select id="country" name="country" required>
+                    <option value="USA">USA</option>
+                    <option value="Canada">Canada</option>
+                    <option value="UK">UK</option>
+                    
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label class="label">Gender:</label>
+                <div class="checkbox-group">
+                    <label><input type="checkbox" name="gender" value="male"> Male</label>
+                    <label><input type="checkbox" name="gender" value="female"> Female</label>
+                    <label><input type="checkbox" name="gender" value="other"> Other</label>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label class="label" for="profession">Profession:</label>
+                <input type="text" id="profession" name="profession" required>
+            </div>
+
+            <div class="form-group">
+                <label class="label" for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+            </div>
+
+            <div class="form-group">
+                <label class="label" for="mobile">Mobile Number:</label>
+                <input type="tel" id="mobile" name="mobile" required>
+            </div>
+
+            <div class="form-group">
+                <button class="button" type="submit">Submit</button>
+                <button class="button reset" type="reset">Reset</button>
+            </div>
+        </form>
+    </div>
+
+    <script>
+        document.getElementById('surveyForm').addEventListener('submit', function (event) {
+            event.preventDefault();
+        });
+    </script>
+</body>
+</html>
